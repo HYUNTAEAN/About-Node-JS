@@ -15,27 +15,27 @@
       <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
    
     <서버 내 구동 구문 작성>
-      if(pathname === '/') 이프문으로 컨트롤러 역할 수행 <br>
-      <이중 이프문><br>
-        queryData.id 를 통해 쿼리스트링 데이터로 판별가능 (Like Session Scope)<br>
-        (undefined 체크)<br><br>
+      if(pathname === '/') 이프문으로 컨트롤러 역할 수행
+      <이중 이프문>
+        queryData.id 를 통해 쿼리스트링 데이터로 판별가능 (Like Session Scope)
+        (undefined 체크)
    
    <<<request 반입>>><br>
-   request.on('data', function(data){<br>
-      <데이터 패러미터 가공가능><br>
-   });<br><br>
+    request.on('data', function(data){
+      <데이터 패러미터 가공가능>
+    });
    
-   request.on('end', function(){<br>
-      <종료 함수><br>
-   });<br><br><br>
+    request.on('end', function(){
+      <종료 함수>
+    });
    
    
    <response 반환><br>
-   response.writeHead(200); 헤드 반환 <br>
-      (302는 리다이렉션 , {Location: `/`})<br>
-      (404는 에러)<br>
-   response.end(패러미터); 템플릿 (뷰화면) 반환<br>
-});<br><br><br>
+    response.writeHead(200); 헤드 반환
+      (302는 리다이렉션 , {Location: `/`})
+      (404는 에러)
+    response.end(패러미터); 템플릿 (뷰화면) 반환
+    });
 
      
 
