@@ -10,7 +10,7 @@
 2. const app = http.createServer(function(request, response){<br>
 
   
-  <주소> let _url = request.url;
+    <주소> let _url = request.url;
     <쿼리 데이터> let queryData = url.parse(_url, true).query;
       <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
    
