@@ -1,21 +1,20 @@
 # Node.js
 
 <h2><타입></h2>
-const -> 변환 불가<br>
-let -> 변환가능, 재선언 불가<br>
-var -> 버리고<br><br>
+  const -> 변환 불가
+  let -> 변환가능, 재선언 불가
+  var -> 버리고
 
 <h2><서버 설계></h2>
 1. const http = require('http'); 서버 객체 생성<br>
 2. const app = http.createServer(function(request, response){<br>
-<br>
-  <주소> let _url = request.url;<br>
-  <쿼리 데이터> let queryData = url.parse(_url, true).query;<br>
-  <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;<br>
-   <br><br>
+
+  <주소> let _url = request.url;
+  <쿼리 데이터> let queryData = url.parse(_url, true).query;
+  <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
    
-   <서버 내 구동 구문 작성><br>
-   if(pathname === '/') 이프문으로 컨트롤러 역할 수행 <br>
+    <서버 내 구동 구문 작성>
+      if(pathname === '/') 이프문으로 컨트롤러 역할 수행 <br>
       <이중 이프문><br>
         queryData.id 를 통해 쿼리스트링 데이터로 판별가능 (Like Session Scope)<br>
         (undefined 체크)<br><br>
