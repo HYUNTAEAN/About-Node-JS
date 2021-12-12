@@ -69,9 +69,9 @@
      
          
          
-<h2>CRUD</h2>
+<h2>CREATE문</h2>
          
-         <h3>Create</h3>
+         
          Create 페이지 호출
          
          if(pathname === '/create') 로 리퀘스트 매핑
@@ -95,3 +95,39 @@
          post.식별자 로 let 포밍후 이용 가능
          
          fs.writeFile(`저장경로`, 내용변수, 'utf8' function(err)
+         
+         
+<h3>UPDATE문</h3>
+         
+         Update 페이지 호출
+         
+         if(pathname === '/update')
+         fs.readdir / fs.readFile의 queryData.id를 통해
+         해당 정보 호출 후
+         form 선언 부에 value 값으로 넣음
+         
+         form에서 리퀘스트 매핑 지정
+         
+         Update 데이터 POST 방식으로 전송
+         
+         포스트 방식 결합 이후
+         
+         fs.rename(`경로명/${id}`, `data/${바뀔이름}`, function(error){
+            fs.writeFile(`경로명/${바뀐이름}`, 내용변수, 'utf8', function(err){
+                헤더는 302 리다이렉트
+         
+<h3>Delete문</h3>
+         
+
+         Delete 페이지는 따로 두기보단
+         메인 뷰에서 form 으로 바로 처리할 수 있게함
+         
+         Delete_process 호출시
+         POST 방식으로 전송 이후
+         
+         fs.unlink(`data/${id}`, function(error){
+            302 헤더 리다이렉트
+         
+         를 통해 삭제
+         
+         
