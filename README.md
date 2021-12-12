@@ -29,3 +29,18 @@ or
 실질적으로 2번 인덱스부터 이용가능
 
 .readdir( folder명, function(error, filelist)
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+
+request.url 로 전체 url주소 불러옴
+
+url.parse(_url, true).query;
+url.parse(_url, true).pathname;
+을 통하여
+
+pathname ('/~')
+queryData.id ('?id=') 
+
+컨트롤러 역할 수행 가능
+
