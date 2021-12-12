@@ -116,7 +116,7 @@
             fs.writeFile(`경로명/${바뀐이름}`, 내용변수, 'utf8', function(err){
                 헤더는 302 리다이렉트
          
-<h3>Delete문</h3>
+<h3>DELETE문</h3>
          
 
          Delete 페이지는 따로 두기보단
