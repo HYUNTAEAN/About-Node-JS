@@ -1,46 +1,67 @@
 # Node.js
 
-서버생성
+<h2><타입><h2>
+const -> 변환 불가
+let -> 변환가능, 재선언 불가
+var -> 버리고
 
-http 객체 생성 -> require('http');
-host, port 객체 생성
+<h2><서버 설계></h2>
+1. const http = require('http'); 서버 객체 생성
+2. const app = http.createServer(function(request, response){
 
-http.createServer -> 패러미터 Request, Response
+  <주소> let _url = request.url;
+  <쿼리 데이터> let queryData = url.parse(_url, true).query;
+  <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
+   
+   
+   <서버 내 구동 구문 작성>
+   if(pathname === '/') 이프문으로 컨트롤러 역할 수행 
+      <이중 이프문>
+        queryData.id 를 통해 쿼리스트링 데이터로 판별가능 (Like Session Scope)
+        (undefined 체크)
+   
+   <<<request 반입>>>
+   request.on('data', function(data){
+      <데이터 패러미터 가공가능>
+   });
+   
+   request.on('end', function(){
+      <종료 함수>
+   });
+   
+   
+   <response 반환>
+   response.writeHead(200); 헤드 반환 
+      (302는 리다이렉션 , {Location: `/`})
+      (404는 에러)
+   response.end(패러미터); 템플릿 (뷰화면) 반환
+});
 
-헤더설정 'Content-Type' : 'text/plain'
-end 지정 ( template 객체에 html ` ` 로 지정하여 뷰 생성 )
+     
 
-생성된 서버 객체 .listen ( 패러미터 port, host)
+3. app.listen(3000); 포트번호 연결
 
-QueryString 이용하여 동적 웹페이징 가능
+          
 
-request.url -> url 주소
-url.pares(_url, true).query; -> Query 데이터
-queryData.속성명 -> 이용하여 html 단에 ${} 부분 동적 수정 가능
-
-파일 읽기 객체선언 require('fs');
-.readFile('.txt', 'utf8', function(err, data){
-
-or
-
-.readFile(`data/${queryData.id}`,'utf8', function(err, description){
-
-배열선언 var args = process.argv;
-실질적으로 2번 인덱스부터 이용가능
-
-.readdir( folder명, function(error, filelist)
-
-
-<h2>컨트롤러 역할</h2>
-
-request.url 로 전체 url주소 불러옴
-
-url.parse(_url, true).query;
-url.parse(_url, true).pathname;
-을 통하여
-
-pathname ('/~')
-queryData.id ('?id=') 
-
-컨트롤러 역할 수행 가능
-
+<h2>파일 리더</h2>
+const fs = require('fs');
+     
+     fs.readdir('./경로명', function(error, filelist){
+          fs.readFile(`경로명/파일명`, 'utf8', function(err, description){
+        
+          });
+     });
+     
+<h2>모듈화</h2>
+     
+     <메인 js에서 임포트>
+     const 객체명 = require('./파일명.js');
+       
+     <모듈 공유 선언>
+     module.exports = {
+     
+       기능명:function(패러미터){
+          return;
+       }
+     }
+     
