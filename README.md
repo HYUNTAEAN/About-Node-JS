@@ -3,7 +3,7 @@
 <h2><타입></h2>
 const -> 변환 불가<br>
 let -> 변환가능, 재선언 불가<br>
-var -> 버리고<br>
+var -> 버리고<br><br>
 
 <h2><서버 설계></h2>
 1. const http = require('http'); 서버 객체 생성<br>
