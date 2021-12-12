@@ -1,9 +1,9 @@
 # Node.js
 
-<h2><타입></h2>
-    const -> 변환 불가
-    let -> 변환가능, 재선언 불가
-    var -> 버리고
+<h2><타입></h2><br>
+    const -> 변환 불가<br>
+    let -> 변환가능, 재선언 불가<br>
+    var -> 버리고<br>
 
 <h2><서버 설계></h2>
 1. const http = require('http'); 서버 객체 생성<br>
@@ -20,7 +20,7 @@
         queryData.id 를 통해 쿼리스트링 데이터로 판별가능 (Like Session Scope)
         (undefined 체크)
    
-   <<<request 반입>>><br>
+   <request 반입><br>
         
         request.on('data', function(data){
         <데이터 패러미터 가공가능>
