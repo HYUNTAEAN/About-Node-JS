@@ -31,7 +31,7 @@ or
 .readdir( folder명, function(error, filelist)
 
 
-ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+<h2>컨트롤러 역할</h2>
 
 request.url 로 전체 url주소 불러옴
 
