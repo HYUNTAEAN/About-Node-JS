@@ -4,6 +4,7 @@
     const -> 변환 불가<br>
     let -> 변환가능, 재선언 불가<br>
     var -> 버리고<br>
+    let 배열명 = process.argv; -> 배열선언 2번 인덱스부터<br>
 
 <h2><서버 설계></h2>
 1. const http = require('http'); 서버 객체 생성<br>
