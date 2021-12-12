@@ -132,3 +132,13 @@
          를 통해 삭제
          
          
+<h3>보안키 생성</h3>
+         
+         <상위 경로>
+         const path = require('path');
+             const filteredId = path.parse(queryData.id).base;
+             선언을 통해 상위 디렉토리로 접근할 수 있는 경로를 차단함
+             
+             
+         
+         
