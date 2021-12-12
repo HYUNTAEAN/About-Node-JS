@@ -139,6 +139,22 @@
              const filteredId = path.parse(queryData.id).base;
              선언을 통해 상위 디렉토리로 접근할 수 있는 경로를 차단함
              
+         <출력 보안>
+         npm init
+             is thos ok?
+             npm install -S sanitize-html
+             
+         의존성 주입 이후
+             
+             const sanitizeHtml = require('sanitize-html');
+             
+             let 변수명 = sanitizeHtml(변수, {alowedTags:['h1']});
+             
+             이후 키값에 새로 선언된 보안 변수를 사용하면
+             보안 취약점을 이용한 출력 데이터의 가공을 막을 수 있음
+             
+             
+             
              
          
          
