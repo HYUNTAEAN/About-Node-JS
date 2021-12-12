@@ -9,9 +9,10 @@
 1. const http = require('http'); 서버 객체 생성<br>
 2. const app = http.createServer(function(request, response){<br>
 
+  
   <주소> let _url = request.url;
-  <쿼리 데이터> let queryData = url.parse(_url, true).query;
-  <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
+    <쿼리 데이터> let queryData = url.parse(_url, true).query;
+      <리퀘스트 매핑> let pathname = url.parse(_url,true).pathname;
    
     <서버 내 구동 구문 작성>
       if(pathname === '/') 이프문으로 컨트롤러 역할 수행 <br>
