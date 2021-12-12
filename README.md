@@ -24,3 +24,7 @@ queryData.속성명 -> 이용하여 html 단에 ${} 부분 동적 수정 가능
 or
 
 .readFile(`data/${queryData.id}`,'utf8', function(err, description){
+
+배열선언 var args = process.argv;
+실질적으로 2번 인덱스부터 이용가능
+
