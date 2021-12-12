@@ -31,11 +31,12 @@
    
    
    <response 반환><br>
-    response.writeHead(200); 헤드 반환
-      (302는 리다이렉션 , {Location: `/`})
-      (404는 에러)
-    response.end(패러미터); 템플릿 (뷰화면) 반환
-    });
+     
+     response.writeHead(200); 헤드 반환
+     (302는 리다이렉션 , {Location: `/`})
+     (404는 에러)
+     response.end(패러미터); 템플릿 (뷰화면) 반환
+     });
 
      
 
