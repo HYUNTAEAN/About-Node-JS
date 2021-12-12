@@ -67,3 +67,31 @@
        }
      }
      
+         
+         
+<h2>CRUD</h2>
+         
+         <h3>Create</h3>
+         Create 페이지 호출
+         
+         if(pathname === '/create') 로 리퀘스트 매핑
+         create form 만들어서 response
+         
+         Create 데이터 POST 방식으로 전송
+         
+         if(pathname === '/create_process')
+         let body = '';
+         request.on('data', function(data){
+            body = body + data;
+         }); 
+         
+         포스트 방식 결합 후
+         const qs = require('querystring'); 
+         qs 선언을 이용
+         
+         let post = qs.parse(body);
+         POST 방식 데이터 획득
+         
+         post.식별자 로 let 포밍후 이용 가능
+         
+         fs.writeFile(`저장경로`, 내용변수, 'utf8' function(err)
