@@ -54,7 +54,7 @@ var app = http.createServer(function(request, response){
         fs.readFile(`data/${queryData.id}`, 'utf8', function(err, description){
           var title = queryData.id;
           var list = templateList(filelist);
-          var temlplate = templateHTML(title, list, `<h2>${title}</h2>${description}`);
+          var template = templateHTML(title, list, `<h2>${title}</h2>${description}`);
           response.writeHead(200);
           response.end(template);
         });
