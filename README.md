@@ -28,3 +28,4 @@ or
 배열선언 var args = process.argv;
 실질적으로 2번 인덱스부터 이용가능
 
+.readdir( folder명, function(error, filelist)
