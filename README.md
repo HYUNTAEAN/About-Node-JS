@@ -21,12 +21,13 @@
         (undefined 체크)
    
    <<<request 반입>>><br>
-      request.on('data', function(data){
+        
+        request.on('data', function(data){
         <데이터 패러미터 가공가능>
-      });
-      request.on('end', function(){
+        });
+        request.on('end', function(){
         <종료 함수>
-      });
+        });
    
    
    <response 반환><br>
