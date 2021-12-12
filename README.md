@@ -44,24 +44,25 @@ var -> 버리고<br><br>
           
 
 <h2>파일 리더</h2><br>
-const fs = require('fs');<br><br>
      
-     fs.readdir('./경로명', function(error, filelist){<br>
-          fs.readFile(`경로명/파일명`, 'utf8', function(err, description){<br><br>
+     const fs = require('fs');
+     
+     fs.readdir('./경로명', function(error, filelist){
+          fs.readFile(`경로명/파일명`, 'utf8', function(err, description){
         
-          });<br>
-     });<br><br>
+          });
+     });
      
 <h2>모듈화</h2>
-     <br>
-     <메인 js에서 임포트><br>
-     const 객체명 = require('./파일명.js');<br><br>
-       
-     <모듈 공유 선언><br>
-     module.exports = {<br><br>
      
-       기능명:function(패러미터){<br>
-          return;<br>
-       }<br>
-     }<br><br>
+     <메인 js에서 임포트>
+     const 객체명 = require('./파일명.js');
+       
+     <모듈 공유 선언>
+     module.exports = {
+     
+       기능명:function(패러미터){
+          return;
+       }
+     }
      
